@@ -1,12 +1,9 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AutomationTask.DriverInit
 {
-   public static class DriverOptions
+    public static class DriverOptions
     {
         public static ChromeOptions GetChromeOptions(string lang)
         {

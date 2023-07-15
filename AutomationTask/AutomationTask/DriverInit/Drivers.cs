@@ -3,8 +3,6 @@ using AutomationTask.ObjectsForJson;
 using AutomationTask.Utils;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AutomationTask.DriverInit
 {

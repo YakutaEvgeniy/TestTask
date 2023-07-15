@@ -1,12 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace AutomationTask.Utils
 {
-   public static class FileReader
+    public static class FileReader
     {
         public static T JsonReader<T>(string path)
         {

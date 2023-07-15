@@ -10,7 +10,7 @@ namespace AutomationTask.Pages
 
         private static IWebElement TitleElement => Drivers.getDriver().FindElement(By.XPath(titleXpath));
 
-        public static bool CheckInscriptionTextIsRight()
+        public static bool CheckWelcomeMessageTextIsRight()
         {
             return TitleElement.Text.Equals(DateTimeUtils.GetMessageByTime());
         }

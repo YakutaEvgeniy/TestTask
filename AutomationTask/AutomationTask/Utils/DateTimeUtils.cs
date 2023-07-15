@@ -1,8 +1,6 @@
 ﻿using AutomationTask.Constatns;
 using AutomationTask.ObjectsForJson;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AutomationTask.Utils
 {
