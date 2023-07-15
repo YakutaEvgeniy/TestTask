@@ -1,7 +1,6 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
+﻿using AutomationTask.DriverInit;
+using AutomationTask.Pages;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 namespace AutomationTask.Steps
@@ -9,12 +8,16 @@ namespace AutomationTask.Steps
     [Binding]
     public class CheckGreetingsSteps
     {
-        [Given(@"Go To AuthPage")]
-        public void GivenGoToAuthPage()
+        [Given(@"Authorization login page has been opened")]
+        public void NavigateToAuthPage()
         {
-            IWebDriver driver = new ChromeDriver();
+            Drivers.Navigation("https://my.life-pos.ru/auth/login");
+        }
 
-            driver.Navigate().GoToUrl("https://www.selenium.dev/selenium/web/web-form.html");
+        [Then(@"The welcome inscription is written correctly depending on the current time")]
+        public void CheckWelcomeInscription()
+        {
+            Assert.IsTrue(AuthPage.CheckInscriptionTextIsRight(), "Welcome message does not match the time");
         }
     }
 }
