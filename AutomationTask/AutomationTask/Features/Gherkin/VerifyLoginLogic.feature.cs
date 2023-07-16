@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutomationTask.Features.AuthorizationPage
+namespace AutomationTask.Features.Gherkin
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,22 +20,22 @@ namespace AutomationTask.Features.AuthorizationPage
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Verification Of The Authorization Page")]
-    public partial class VerificationOfTheAuthorizationPageFeature
+    [NUnit.Framework.DescriptionAttribute("Verify Login Logic")]
+    public partial class VerifyLoginLogicFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "VerifyWelcomeMessage.feature"
+#line 1 "VerifyLoginLogic.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/AuthorizationPage", "Verification Of The Authorization Page", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Gherkin", "Verify Login Logic", "\tSimple calculator for adding two numbers", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +74,18 @@ namespace AutomationTask.Features.AuthorizationPage
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify the correctness of the welcome message on the authorization page")]
-        public void VerifyTheCorrectnessOfTheWelcomeMessageOnTheAuthorizationPage()
+        [NUnit.Framework.DescriptionAttribute("Check accaunt login logic is work correctly with correct abd incorrect user data")]
+        [NUnit.Framework.TestCaseAttribute("Correct", "is not", "is", null)]
+        [NUnit.Framework.TestCaseAttribute("Incorrect", "is", "is not", null)]
+        public void CheckAccauntLoginLogicIsWorkCorrectlyWithCorrectAbdIncorrectUserData(string userData, string errorStatus, string pageStatus, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the correctness of the welcome message on the authorization page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 3
+            argumentsOfScenario.Add("UserData", userData);
+            argumentsOfScenario.Add("ErrorStatus", errorStatus);
+            argumentsOfScenario.Add("PageStatus", pageStatus);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check accaunt login logic is work correctly with correct abd incorrect user data", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -90,11 +95,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
+#line 5
  testRunner.Given("Authorization login page was opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 5
- testRunner.Then("The welcome message is written correctly depending on the current time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 6
+ testRunner.When(string.Format("The Login labels is filled by {0} user data", userData), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 7
+  testRunner.And("The \'Login to your personal account\' button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 8
+ testRunner.Then(string.Format("The \'Error message\' message {0} displayed", errorStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 9
+  testRunner.And(string.Format("The \'Create Account\' page {0} opened", pageStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

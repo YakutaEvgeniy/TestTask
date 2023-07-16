@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutomationTask.Features.AuthorizationPage
+namespace AutomationTask.Features.Gherkin
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,22 +20,22 @@ namespace AutomationTask.Features.AuthorizationPage
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Verification Of The Authorization Page")]
-    public partial class VerificationOfTheAuthorizationPageFeature
+    [NUnit.Framework.DescriptionAttribute("Verify Tariff prices")]
+    public partial class VerifyTariffPricesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "VerifyWelcomeMessage.feature"
+#line 1 "VerifyTariffsPricesc.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/AuthorizationPage", "Verification Of The Authorization Page", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Gherkin", "Verify Tariff prices", "\tSimple calculator for adding two numbers", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +74,13 @@ namespace AutomationTask.Features.AuthorizationPage
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify the correctness of the welcome message on the authorization page")]
-        public void VerifyTheCorrectnessOfTheWelcomeMessageOnTheAuthorizationPage()
+        [NUnit.Framework.DescriptionAttribute("Verify if tariff prices displays correctly")]
+        public void VerifyIfTariffPricesDisplaysCorrectly()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the correctness of the welcome message on the authorization page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 3
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify if tariff prices displays correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -90,11 +90,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
- testRunner.Given("Authorization login page was opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 5
- testRunner.Then("The welcome message is written correctly depending on the current time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("Support page was opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 6
+ testRunner.When("The \'Tariffs\' button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 7
+ testRunner.Then("The \'Tariffs\' page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Tarrif_Nane",
+                            "Price"});
+                table2.AddRow(new string[] {
+                            "Лайт",
+                            "0"});
+                table2.AddRow(new string[] {
+                            "Базовый",
+                            "0"});
+                table2.AddRow(new string[] {
+                            "Стартовый",
+                            "300"});
+                table2.AddRow(new string[] {
+                            "Продвинутый",
+                            "700"});
+#line 8
+  testRunner.And("The Tariffs  prices is Displayed correctly:", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

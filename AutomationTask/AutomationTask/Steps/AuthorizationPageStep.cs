@@ -8,7 +8,7 @@ namespace AutomationTask.Steps
     [Binding]
     public class AuthorizationPageStep
     {
-        [Given(@"Authorization login page has been opened")]
+        [Given(@"Authorization login page was opened")]
         public void NavigateToAuthPage()
         {
             Drivers.Navigation("https://my.life-pos.ru/auth/login");

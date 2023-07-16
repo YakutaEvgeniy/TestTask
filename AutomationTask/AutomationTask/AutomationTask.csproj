@@ -23,6 +23,7 @@
     <PackageReference Include="SpecFlow" Version="3.9.74" />
     <PackageReference Include="SpecFlow.Allure" Version="3.5.0.73" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
+    <PackageReference Include="SpecRun.Runner" Version="3.9.31" />
   </ItemGroup>
 
   <ItemGroup>

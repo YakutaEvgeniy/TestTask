@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutomationTask.Features.AuthorizationPage
+namespace AutomationTask.Features.Gherkin
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,22 +20,22 @@ namespace AutomationTask.Features.AuthorizationPage
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Verification Of The Authorization Page")]
-    public partial class VerificationOfTheAuthorizationPageFeature
+    [NUnit.Framework.DescriptionAttribute("Verify Recovery Password Logic")]
+    public partial class VerifyRecoveryPasswordLogicFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "VerifyWelcomeMessage.feature"
+#line 1 "VerifyRecoveryPasswordLogic.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/AuthorizationPage", "Verification Of The Authorization Page", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Gherkin", "Verify Recovery Password Logic", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,12 +74,12 @@ namespace AutomationTask.Features.AuthorizationPage
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify the correctness of the welcome message on the authorization page")]
-        public void VerifyTheCorrectnessOfTheWelcomeMessageOnTheAuthorizationPage()
+        [NUnit.Framework.DescriptionAttribute("Check if the password recovery logic works correctly")]
+        public void CheckIfThePasswordRecoveryLogicWorksCorrectly()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the correctness of the welcome message on the authorization page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if the password recovery logic works correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -94,7 +94,41 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Authorization login page was opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
- testRunner.Then("The welcome message is written correctly depending on the current time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The \'Recovery password\' link is presented on \'Authorization\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 6
+ testRunner.When("The \'Recovery password\' link is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 7
+ testRunner.Then("The \'Recovery password login\' page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 8
+ testRunner.When("The \'Phone Number\' label is filled by \'1234567890\' data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 9
+  testRunner.And("The SMS code is received and entered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 10
+  testRunner.And("The \'Send SMS\' button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 11
+ testRunner.Then("The \'Success SMS\' message is Displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 12
+ testRunner.When("The \'Next\' button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 13
+ testRunner.Then("The \'Recovery password\' page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 14
+ testRunner.When("Password is upated by new random password and remembered as \'New_Password\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 15
+ testRunner.Then("The Authorization login page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 16
+ testRunner.When("The Login labels is filled by \'1234567890\' number and remembered password \'New_Pa" +
+                        "ssword\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -9,7 +9,7 @@ namespace AutomationTask.Utils
         private static int startMorningHour = 6;
         private static int startDayHour = 12;
         private static int startEveningHour = 18;
-        private static int startNightHour = 0;
+        private static int startNightHour = 23;
 
         private static Message Messages = FileReader.JsonReader<Message>(FilePaths.PATH_TO_MESSAGE_DATA);
 
@@ -24,13 +24,13 @@ namespace AutomationTask.Utils
             {
                 return Messages.DayMessage;
             }
-            else if (hour < startMorningHour)
+            else if (startEveningHour <= hour && hour < startNightHour)
             {
-                return Messages.NightMessage;
+                return Messages.EveningMessage;
             }
             else
             {
-                return Messages.EveningMessage;
+                return Messages.NightMessage;
             }
         }
     }

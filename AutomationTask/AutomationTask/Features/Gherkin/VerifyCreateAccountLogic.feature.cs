@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutomationTask.Features.AuthorizationPage
+namespace AutomationTask.Features.Gherkin
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,22 +20,22 @@ namespace AutomationTask.Features.AuthorizationPage
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Verification Of The Authorization Page")]
-    public partial class VerificationOfTheAuthorizationPageFeature
+    [NUnit.Framework.DescriptionAttribute("Verify Create Account Logic")]
+    public partial class VerifyCreateAccountLogicFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "VerifyWelcomeMessage.feature"
+#line 1 "VerifyCreateAccountLogic.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/AuthorizationPage", "Verification Of The Authorization Page", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Gherkin", "Verify Create Account Logic", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,12 +74,12 @@ namespace AutomationTask.Features.AuthorizationPage
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify the correctness of the welcome message on the authorization page")]
-        public void VerifyTheCorrectnessOfTheWelcomeMessageOnTheAuthorizationPage()
+        [NUnit.Framework.DescriptionAttribute("Check that create a personal account button is disable without SMS code")]
+        public void CheckThatCreateAPersonalAccountButtonIsDisableWithoutSMSCode()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the correctness of the welcome message on the authorization page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check that create a personal account button is disable without SMS code", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -94,7 +94,33 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Authorization login page was opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
- testRunner.Then("The welcome message is written correctly depending on the current time", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The \'Create an account\' link is presented on \'Authorization\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 6
+ testRunner.When("The \'Create an account\' link is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 7
+ testRunner.Then("The \'Create Account\' page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 8
+  testRunner.And("The \'create a personal account\' button is Disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Phone_Number",
+                            "Name",
+                            "Password"});
+                table1.AddRow(new string[] {
+                            "1234567890",
+                            "Jhon Smith",
+                            "12345"});
+#line 9
+ testRunner.When("The Create Account labels is filled by data from table:", ((string)(null)), table1, "When ");
+#line hidden
+#line 12
+ testRunner.Then("The \'SMS code\' label is Disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 13
+  testRunner.And("The \'create a personal account\' button is Disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
