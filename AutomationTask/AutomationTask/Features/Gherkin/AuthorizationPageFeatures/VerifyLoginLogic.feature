@@ -1,5 +1,4 @@
 ﻿Feature: Verify Login Logic
-	Simple calculator for adding two numbers
 
 Scenario Outline: Check accaunt login logic is work correctly with correct abd incorrect user data
 	Given Authorization login page was opened

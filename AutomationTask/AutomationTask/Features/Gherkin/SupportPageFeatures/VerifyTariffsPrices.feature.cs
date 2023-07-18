@@ -28,14 +28,14 @@ namespace AutomationTask.Features.Gherkin
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "VerifyTariffsPricesc.feature"
+#line 1 "VerifyTariffsPrices.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Gherkin", "Verify Tariff prices", "\tSimple calculator for adding two numbers", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Gherkin", "Verify Tariff prices", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,7 +80,7 @@ namespace AutomationTask.Features.Gherkin
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify if tariff prices displays correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 4
+#line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -90,32 +90,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 4
  testRunner.Given("Support page was opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 6
+#line 5
  testRunner.When("The \'Tariffs\' button is clicked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 7
+#line 6
  testRunner.Then("The \'Tariffs\' page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Tarrif_Nane",
                             "Price"});
-                table2.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Лайт",
                             "0"});
-                table2.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Базовый",
                             "0"});
-                table2.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Стартовый",
                             "300"});
-                table2.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Продвинутый",
                             "700"});
-#line 8
-  testRunner.And("The Tariffs  prices is Displayed correctly:", ((string)(null)), table2, "And ");
+#line 7
+  testRunner.And("The Tariffs  prices is Displayed correctly:", ((string)(null)), table5, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
